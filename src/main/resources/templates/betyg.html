@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    table, th, td {
+        border:1px solid black;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adminstrera betyg</title>
+</head>
+<body>
+
+<h2>Adminstrera resultat</h2>
+
+<table style="width:100%">
+    <tr>
+        <th>AnvändarID</th>
+        <th>Namn</th>
+        <th>Ömdömde i Canvas</th>
+        <th>Betyg i Ladok</th>
+        <th>Examinationsdatum</th>
+        <th>Status</th>
+        <th>Hinder</th>
+    </tr>
+    <tr th:each="betyg: ${betyg}">
+        <td th:text="${betyg.id}"></td>
+        <td th:text="${betyg.namn}"></td>
+        <td th:text="${betyg.omdomeCanvas}"></td>
+        <td th:text="${betyg.betygLadok}"></td>
+        <td th:text="${betyg.examinationsdatum}"></td>
+        <td th:text="${betyg.Status}"></td>
+        <td th:text="${betyg.hinder}"></td>
+    </tr>
+
+</table>
+
+
+
+</body>
+</html>
